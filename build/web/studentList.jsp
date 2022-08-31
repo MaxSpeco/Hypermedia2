@@ -24,10 +24,9 @@
                         <td>   ${student1.studentCity} </td>
                         <td>   ${student1.studentPhoneNumber} </td>
                         
-                        <td>    <a href="<c:url value='/student?x=${student1.studentId}'/>">delete</a>   
-                        </td>
-                        <td>     <a href="<c:url value='/student?x=${student1.studentId}?act=update'/>">update</a>   <br>
-                        </td>
+                        <td>    <a href="<c:url value='/student?x=${student1.studentId}&act=delete'/>">delete</a>   </td>
+                        <td>    <a href="<c:url value='/student?x=${student1.studentId}&act=update'/>">update</a>   <br> </td>
+                        <%--<td>     <a href="<c:url value='/student?x=${student1.studentId}?act=update'/>">update</a>   <br> </td> --%> 
                     </tr>
                 </c:forEach>
             </table>

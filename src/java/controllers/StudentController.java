@@ -8,7 +8,9 @@ package controllers;
 import DaoImp.StudentDAOImplementation;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -37,12 +39,21 @@ public class StudentController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-///
+
         int id = Integer.parseInt(request.getParameter("x"));
         String action = request.getParameter("act");
      //   PersonDAOImplementation dao = new PersonDAOImplementation();
-
-        dao.delete(id);
+        if(action.equals("delete")){
+            dao.delete(id);
+        }
+        else if(action.equals("update")){
+            Student s = dao.findById(id);
+            request.setAttribute("student", s);
+            getServletContext().getRequestDispatcher("/studentUpdate.jsp").forward(request, response);
+            
+            
+        }
+        
 
         List<Student> listStudents = dao.findAll();
 

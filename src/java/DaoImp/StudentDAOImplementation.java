@@ -61,7 +61,7 @@ public class StudentDAOImplementation implements StudentDao{
         PreparedStatement preparedStatement = null;
 
         try {
-            String selectIdQuery = "SELECT * FROM persons where id = ?";
+            String selectIdQuery = "SELECT * FROM etudiants where id = ?";
             preparedStatement = connection.prepareStatement(selectIdQuery);
             preparedStatement.setInt(1, id);
             resultSet = preparedStatement.executeQuery();

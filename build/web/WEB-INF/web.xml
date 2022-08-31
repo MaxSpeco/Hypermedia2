@@ -15,6 +15,11 @@
         <filter-name>Firstf</filter-name>
         <filter-class>filters.FirstFilter</filter-class>
     </filter>
+    
+    <filter>
+        <filter-name>FilterEx</filter-name>
+        <filter-class>filters.FilterExample</filter-class>
+    </filter>
    
     
     
@@ -22,6 +27,7 @@
         <filter-name>Firstf</filter-name>
         <url-pattern>/*</url-pattern>
         <dispatcher>REQUEST</dispatcher>
+
     </filter-mapping>
  
 
