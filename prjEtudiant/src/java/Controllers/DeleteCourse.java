@@ -4,6 +4,7 @@
  */
 package Controllers;
 
+import Dao.CourseDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -38,6 +39,10 @@ public class DeleteCourse extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet DeleteCourse at " + request.getContextPath() + "</h1>");
+            String sid=request.getParameter("id");  
+            int id=Integer.parseInt(sid);  
+            CourseDao.delete(id);  
+            response.sendRedirect("ViewCourses");
             out.println("</body>");
             out.println("</html>");
         }
