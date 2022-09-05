@@ -34,7 +34,7 @@ public class ViewGrades extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-     out.println("<a href='index.html'>Add New Grade</a>");  
+     out.println("<a href=EditGrade>Add New Grade</a>");  
         out.println("<h1>Grade List</h1>");  
           
         List<Grade> list=GradeDao.getAllGrades();  
