@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 package Controllers;
-
 import Dao.StudentDao;
 import Model.Student;
 import java.io.IOException;
@@ -13,7 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List; 
-
 /**
  *
  * @author glyder319
@@ -42,7 +40,16 @@ public class ViewStudents extends HttpServlet {
         out.print("<table border='1' width='100%'");  
         out.print("<tr><th>Id</th><th>Name</th><th>City</th><th>PhoneNumber</th><th>Edit</th><th>Delete</th></tr>");  
         for(Student e:list){  
-         out.print("<tr><td>"+e.getStudentId()+"</td><td>"+e.getStudentName()+"</td><td>"+e.getStudentCity()+"</td>  <td>"+e.getStudentPhoneNumber()+"</td><td><a href='EditStudent?id="+e.getStudentId()+"'>edit</a></td> <td><a href='DeleteStudent?id="+e.getStudentId()+"'>delete</a></td></tr>");  
+         out.print("<tr><td>"
+                 +e.getStudentId()+"</td><td>"
+                 +e.getStudentName()+"</td><td>"
+                 +e.getStudentCity()+"</td> "
+                 + " <td>"
+                 +e.getStudentPhoneNumber()
+                 +"</td><td><a href='EditStudent?id="
+                 +e.getStudentId()
+                 + "'>edit</a></td> <td><a href='DeleteStudent?id="
+                 +e.getStudentId()+"'>delete</a></td></tr>");  
         }  
         out.print("</table>");  
           
@@ -74,14 +81,19 @@ public class ViewStudents extends HttpServlet {
         out.print("<table border='1' width='100%'");  
         out.print("<tr><th>Id</th><th>Name</th><th>City</th><th>PhoneNumber</th><th>Edit</th><th>Delete</th></tr>");  
         for(Student e:list){  
-         out.print("<tr><td>"+e.getStudentId()+"</td><td>"+e.getStudentName()+"</td><td>"+e.getStudentCity()+"</td>  <td>"+e.getStudentPhoneNumber()+"</td><td><a href='EditServlet?id="+e.getStudentId()+"'>edit</a></td> <td><a href='DeleteServlet?id="+e.getStudentId()+"'>delete</a></td></tr>");  
+         out.print("<tr><td>"
+                 +e.getStudentId()+"</td><td>"
+                 +e.getStudentName()+"</td><td>"
+                 +e.getStudentCity()+"</td>  <td>"
+                 +e.getStudentPhoneNumber()+"</td><td><a href='EditServlet?id="
+                 +e.getStudentId()+"'>edit</a></td> <td><a href='DeleteServlet?id="
+                 +e.getStudentId()+"'>delete</a></td></tr>");  
         }  
         out.print("</table>");  
           
         out.close();  
     }
     
-
     /**
      * Handles the HTTP <code>POST</code> method.
      *

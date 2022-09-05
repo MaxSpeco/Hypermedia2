@@ -4,18 +4,21 @@
  */
 package Controllers;
 
+import Dao.GradeDao;
+import Model.Grade;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List; 
 
 /**
  *
  * @author maxim
  */
-public class ViewGrade extends HttpServlet {
+public class ViewGrades extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,15 +34,26 @@ public class ViewGrade extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ViewGrade</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ViewGrade at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+     out.println("<a href='index.html'>Add New Grade</a>");  
+        out.println("<h1>Grade List</h1>");  
+          
+        List<Grade> list=GradeDao.getAllGrades();  
+          
+        out.print("<table border='1' width='100%'");  
+        out.print("<tr><th>Id</th><th>Id</th><th>GradeId</th><th>Grade</th><th>Edit</th><th>Delete</th></tr>");  
+        for(Grade e:list){  
+         out.print("<tr><td>"
+                 +e.getId()+"</td><td>"
+                 +e.getGradeId()+"</td><td>"
+                 +e.getGrade()+"</td>  <td>"
+                 +"</td><td><a href='EditGrade?id="
+                 +e.getId()
+                 +"'>edit</a></td> <td><a href='DeleteGrade?id="
+                 +e.getId()+"'>delete</a></td></tr>");  
+        }  
+        out.print("</table>");  
+          
+        out.close();
         }
     }
 
@@ -56,6 +70,28 @@ public class ViewGrade extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        
+        response.setContentType("text/html");  
+        PrintWriter out=response.getWriter();  
+        out.println("<a href='index.html'>Add New Grade</a>");  
+        out.println("<h1>Grades List</h1>");  
+          
+        List<Grade> list=GradeDao.getAllGrades();  
+          
+        out.print("<table border='1' width='100%'");  
+        out.print("<tr><th>Id</th><th>Id</th><th>GradeId</th><th>Grade</th><th>Edit</th><th>Delete</th></tr>");  
+        for(Grade e:list){  
+         out.print("<tr><td>"
+                 +e.getId()+"</td><td>"
+                 +e.getGradeId()+"</td><td>"
+                 +e.getGrade()+"</td>  <td>"
+                 +"</td><td><a href='EditServlet?id="
+                 +e.getId()+"'>edit</a></td> <td><a href='DeleteServlet?id="
+                 +e.getId()+"'>delete</a></td></tr>");  
+        }  
+        out.print("</table>");  
+          
+        out.close(); 
     }
 
     /**

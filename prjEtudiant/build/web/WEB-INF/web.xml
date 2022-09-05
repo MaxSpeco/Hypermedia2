@@ -21,8 +21,8 @@
         <servlet-class>Controllers.DeleteStudent</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ViewGrade</servlet-name>
-        <servlet-class>Controllers.ViewGrade</servlet-class>
+        <servlet-name>ViewGrades</servlet-name>
+        <servlet-class>Controllers.ViewGrades</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ViewCourse</servlet-name>
@@ -81,8 +81,8 @@
         <url-pattern>/DeleteStudent</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ViewGrade</servlet-name>
-        <url-pattern>/ViewGrade</url-pattern>
+        <servlet-name>ViewGrades</servlet-name>
+        <url-pattern>/ViewGrades</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ViewCourse</servlet-name>

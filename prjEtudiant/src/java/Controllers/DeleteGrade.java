@@ -4,6 +4,7 @@
  */
 package Controllers;
 
+import Dao.GradeDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -37,7 +38,10 @@ public class DeleteGrade extends HttpServlet {
             out.println("<title>Servlet DeleteGrade</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet DeleteGrade at " + request.getContextPath() + "</h1>");
+            String sid=request.getParameter("id");  
+            int id=Integer.parseInt(sid);  
+            GradeDao.delete(id);  
+            response.sendRedirect("ViewGrades");
             out.println("</body>");
             out.println("</html>");
         }
