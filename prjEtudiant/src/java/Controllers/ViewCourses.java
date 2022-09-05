@@ -40,7 +40,7 @@ public class ViewCourses extends HttpServlet {
         List<Course> list=CourseDao.getAllCourses();  
           
         out.print("<table border='1' width='100%'");  
-        out.print("<tr><th>Id</th><th>Name</th><th>City</th><th>PhoneNumber</th><th>Edit</th><th>Delete</th></tr>");  
+        out.print("<tr><th>CourseId</th><th>CourseName</th><th>CourseDescription</th><th>Edit</th><th>Delete</th></tr>");  
         for(Course e:list){  
          out.print("<tr><td>"+e.getCourseId()+"</td><td>"+e.getCourseName()+"</td><td>"+e.getCourseDescription()+"</td>  "
                  + "</td><td><a href='EditCourse?id="+e.getCourseId()+"'>edit</a></td> <td><a href='DeleteCourse?id="+e.getCourseId()+"'>delete</a></td></tr>");  

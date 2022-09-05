@@ -40,12 +40,12 @@ public class ViewGrades extends HttpServlet {
         List<Grade> list=GradeDao.getAllGrades();  
           
         out.print("<table border='1' width='100%'");  
-        out.print("<tr><th>Id</th><th>Id</th><th>GradeId</th><th>Grade</th><th>Edit</th><th>Delete</th></tr>");  
+        out.print("<tr><th>Id</th><th>GradeId</th><th>Grade</th><th>Edit</th><th>Delete</th></tr>");  
         for(Grade e:list){  
          out.print("<tr><td>"
                  +e.getId()+"</td><td>"
                  +e.getGradeId()+"</td><td>"
-                 +e.getGrade()+"</td>  <td>"
+                 +e.getGrade()
                  +"</td><td><a href='EditGrade?id="
                  +e.getId()
                  +"'>edit</a></td> <td><a href='DeleteGrade?id="
@@ -79,12 +79,12 @@ public class ViewGrades extends HttpServlet {
         List<Grade> list=GradeDao.getAllGrades();  
           
         out.print("<table border='1' width='100%'");  
-        out.print("<tr><th>Id</th><th>Id</th><th>GradeId</th><th>Grade</th><th>Edit</th><th>Delete</th></tr>");  
+        out.print("<tr><th>Id</th><th>GradeId</th><th>Grade</th><th>Edit</th><th>Delete</th></tr>");  
         for(Grade e:list){  
          out.print("<tr><td>"
                  +e.getId()+"</td><td>"
                  +e.getGradeId()+"</td><td>"
-                 +e.getGrade()+"</td>  <td>"
+                 +e.getGrade()
                  +"</td><td><a href='EditServlet?id="
                  +e.getId()+"'>edit</a></td> <td><a href='DeleteServlet?id="
                  +e.getId()+"'>delete</a></td></tr>");  
