@@ -44,20 +44,12 @@ public class GradeDao {
         int status = 0;
         try {
             Connection con = ConnectionFactory.getConnection();
-<<<<<<< Updated upstream
-            PreparedStatement ps = con.prepareStatement("update notes set id=?,coursId=?,note=? where id=?");
-
-            ps.setInt(1, s.getId());
-            ps.setInt(2, s.getGradeId());
-            ps.setInt(3, s.getGrade());
-=======
             PreparedStatement ps = con.prepareStatement("update notes set note=? where id=? AND coursid=?");
 
             ps.setInt(1,s.getGrade());
             ps.setInt(2,s.getId());
             ps.setInt(3,s.getGradeId());
 
->>>>>>> Stashed changes
 
             status = ps.executeUpdate();
 

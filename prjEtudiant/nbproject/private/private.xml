@@ -2,18 +2,17 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< Updated upstream
-        <group/>
-=======
         <group>
             <file>file:/C:/Users/glyder319/Documents/NetBeansProjects/prjEtudiant/prjEtudiant/web/index.html</file>
-            <file>file:/C:/Users/glyder319/Documents/NetBeansProjects/prjEtudiant/prjEtudiant/src/java/Controllers/EditGrade2.java</file>
-            <file>file:/C:/Users/glyder319/Documents/NetBeansProjects/prjEtudiant/prjEtudiant/src/java/Dao/GradeDao.java</file>
+            <file>file:/C:/Users/glyder319/Documents/NetBeansProjects/prjEtudiant/prjEtudiant/src/java/Controllers/ViewCourses.java</file>
             <file>file:/C:/Users/glyder319/Documents/NetBeansProjects/prjEtudiant/prjEtudiant/src/java/Controllers/EditStudent.java</file>
             <file>file:/C:/Users/glyder319/Documents/NetBeansProjects/prjEtudiant/prjEtudiant/src/java/Dao/StudentDao.java</file>
-            <file>file:/C:/Users/glyder319/Documents/NetBeansProjects/prjEtudiant/prjEtudiant/src/java/Controllers/EditGrade.java</file>
+            <file>file:/C:/Users/glyder319/Documents/NetBeansProjects/prjEtudiant/prjEtudiant/src/java/Controllers/ViewStudents.java</file>
+            <file>file:/C:/Users/glyder319/Documents/NetBeansProjects/prjEtudiant/prjEtudiant/src/java/Controllers/ViewGrades.java</file>
+            <file>file:/C:/Users/glyder319/Documents/NetBeansProjects/prjEtudiant/prjEtudiant/src/java/Controllers/EditCourse.java</file>
             <file>file:/C:/Users/glyder319/Documents/NetBeansProjects/prjEtudiant/prjEtudiant/src/java/Controllers/EditStudent2.java</file>
+            <file>file:/C:/Users/glyder319/Documents/NetBeansProjects/prjEtudiant/prjEtudiant/src/java/Controllers/EditCourse2.java</file>
+            <file>file:/C:/Users/glyder319/Documents/NetBeansProjects/prjEtudiant/prjEtudiant/src/java/Dao/CourseDao.java</file>
         </group>
->>>>>>> Stashed changes
     </open-files>
 </project-private>

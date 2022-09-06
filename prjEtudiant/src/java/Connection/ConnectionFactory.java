@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 public class ConnectionFactory {
     private static Connection connection = null;
 
-    public static final String URL = "jdbc:oracle:thin:@//localhost:1521/examenpdb";
+    public static final String URL = "jdbc:oracle:thin:@//localhost:1521/courspdb";
     public static final String USER = "sys as sysdba";
     public static final String PASS = "Welcome1";
 

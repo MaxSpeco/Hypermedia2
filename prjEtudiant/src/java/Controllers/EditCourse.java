@@ -4,6 +4,8 @@
  */
 package Controllers;
 
+import Dao.CourseDao;
+import Model.Course;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -30,14 +32,29 @@ public class EditCourse extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet EditCourse</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet EditCourse at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Update Course</h1>");  
+           String sid = request.getParameter("id");  
+           int id=Integer.parseInt(sid);  
+
+           Course e = CourseDao.getCourseById(id);  
+
+           out.print("<form action='EditCourse2' method='post'>");  
+           out.print("<table>");  
+           out.print("<tr><td>Course ID: </td><td><input type='text' name='id' value='"+e.getCourseId()+"'/></td></tr>");  
+           out.print("<tr><td>Name:</td><td><input type='text' name='coursName' value='"+e.getCourseName()+"'/></td></tr>");  
+           out.print("<tr><td>City:</td><td><input type='text' name='coursDesc' value='"+e.getCourseDescription()+"'/>  </td></tr>");    
+           out.print("<tr><td colspan='2'><input type='submit' value='Edit & Save '/></td></tr>");  
+           out.print("</table>");  
+           out.print("</form>");  
+
+           //out.close();  
+      
             out.println("</body>");
             out.println("</html>");
         }
