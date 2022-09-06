@@ -4,8 +4,16 @@
  */
 package Controllers;
 
+<<<<<<< Updated upstream
 import java.io.IOException;
 import java.io.PrintWriter;
+=======
+import Dao.GradeDao;
+import Model.Grade;
+import java.io.IOException;
+import java.io.PrintWriter;
+import static java.lang.System.out;
+>>>>>>> Stashed changes
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,6 +36,7 @@ public class EditGrade2 extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+<<<<<<< Updated upstream
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -41,6 +50,9 @@ public class EditGrade2 extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
         }
+=======
+
+>>>>>>> Stashed changes
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -70,6 +82,47 @@ public class EditGrade2 extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+<<<<<<< Updated upstream
+=======
+        response.setContentType("text/html;charset=UTF-8");
+            try ( PrintWriter out = response.getWriter()) {
+        
+                out.println("<!DOCTYPE html>");
+                out.println("<html>");
+                out.println("<head>");
+                out.println("<title>Servlet EditGrade2</title>");            
+                out.println("</head>");
+                out.println("<body>");
+
+               String sid = request.getParameter("id");  
+               String numGradeID = request.getParameter("gradeId");
+               String numGrade = request.getParameter("grade");
+                int id = Integer.parseInt(sid);  
+                int gradeId = Integer.parseInt(numGradeID);  
+                int grade = Integer.parseInt(numGrade);  
+                
+                Grade e=new Grade();  
+                e.setId(id);  
+                e.setGradeId(gradeId);  
+                e.setGrade(grade);  
+               
+                int status=GradeDao.update(e);  
+                if(status>0){  
+                    response.sendRedirect("ViewGrades");  
+                }else{  
+                    out.println("Sorry! unable to update record");  
+                    out.println(e.toString());
+                }  
+
+
+
+               out.close();
+                    out.println("</body>");
+                    out.println("</html>");
+            }catch (Exception e){
+                out.println(e.toString());
+            }
+>>>>>>> Stashed changes
     }
 
     /**

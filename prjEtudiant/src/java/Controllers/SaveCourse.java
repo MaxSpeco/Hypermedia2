@@ -25,9 +25,15 @@ public class SaveCourse extends HttpServlet {
         response.setContentType("text/html");  
         PrintWriter out=response.getWriter();  
           
+<<<<<<< Updated upstream
         int id = Integer.parseInt(request.getParameter("id"));  
         String name = request.getParameter("name");  
         String description = request.getParameter("description");   
+=======
+        int id = Integer.parseInt(request.getParameter("courseId"));  
+        String name = request.getParameter("courseName");  
+        String description = request.getParameter("courseDescription");   
+>>>>>>> Stashed changes
         
         Course c = new Course();  
         c.setCourseId(id);  

@@ -42,11 +42,19 @@ public class EditGrade extends HttpServlet {
             String sid = request.getParameter("id");
             int id = Integer.parseInt(sid);
             Grade e = GradeDao.getGradeById(id);
+<<<<<<< Updated upstream
             out.print("<form action='EditGrade' method='post'>");
             out.print("<table>");
             out.print("<tr><td>Id</td><td><input type='text' name='id' value='" + e.getId() + "'/></td></tr>");
             out.print("<tr><td>GradeId:</td><td><input type='text' name='GradeId' value='" + e.getGrade() + "'/></td></tr>");
             out.print("<tr><td>Grade:</td><td><input type='text' name='Grade' value='" + e.getGradeId() + "'/>  </td></tr>");
+=======
+            out.print("<form action='EditGrade2' method='post'>");
+            out.print("<table>");
+            out.print("<tr><td>Id</td><td><input type='text' name='id' value='" + e.getId() + "'/></td></tr>");
+            out.print("<tr><td>GradeId:</td><td><input type='text' name='gradeId' value='" + e.getGradeId() + "'/></td></tr>");
+            out.print("<tr><td>Grade:</td><td><input type='text' name='grade' value='" + e.getGrade() + "'/>  </td></tr>");
+>>>>>>> Stashed changes
             out.print("<tr><td colspan='2'><input type='submit' value='Edit & Save '/></td></tr>");
             out.print("</table>");
             out.print("</form>");
