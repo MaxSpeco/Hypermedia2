@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Projet Étudiant</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+
+        <h1>Add New Student</h1>  
+        <form action="SaveStudent" method="post">  
+            <table>  
+                <tr><td>ID:</td><td><input type="text" name="id" required/></td></tr>  
+                <tr><td>Name:</td><td><input type="text" name="name" required/></td></tr>  
+                <tr><td>City:</td><td><input type="text" name="city" required/></td></tr>  
+                <tr><td>Phone Number:</td><td><input type="text" name="phoneNumber" required/></td></tr>
+
+                <tr><td colspan="2"><input type="submit" value="Save Student"/></td></tr>  
+            </table>  
+        </form>
+         <h1>Add New Course</h1>  
+        <form action="SaveCourse" method="post">  
+            <table>  
+                <tr><td>CoursID:</td><td><input type="text" name="courseId" required/></td></tr>  
+                <tr><td>Course Name:</td><td><input type="text" name="courseName" required/></td></tr>  
+                <tr><td>course Description:</td><td><input type="text" name="courseDescription" required/></td></tr>  
+                
+
+                <tr><td colspan="2"><input type="submit" value="Save Course"/></td></tr>  
+            </table>  
+        </form>
+          <h1>Add New Grade</h1>  
+        <form action="SaveGrade" method="post">  
+            <table>  
+                <tr><td>ID:</td><td><input type="text" name="id" required/></td></tr>  
+                <tr><td>Grade:</td><td><input type="text" name="grade" disabled/></td></tr>  
+                <tr><td>Grade ID:</td><td><input type="text" name="gradeId" disabled/></td></tr>  
+                
+
+                <tr><td colspan="2"><input type="submit" value="Save Grade"/></td></tr>  
+            </table>  
+        </form>  
+        <br/>  
+        <a href="ViewStudents" >view students</a>
+        <br/>  
+        <a href="ViewCourses">view courses</a>
+        <br/>  
+        <a href="ViewGrades">view grades</a>
+
+
+
+    </body>
+</html>
