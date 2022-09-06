@@ -68,7 +68,7 @@ public class ViewCourses extends HttpServlet {
         response.setContentType("text/html");  
         PrintWriter out=response.getWriter();  
         out.println("<a href='index.html'>Add New Employee</a>");  
-        out.println("<h1>Employees List</h1>");  
+        out.println("<h1>Courses List</h1>");  
           
         List<Course> list=CourseDao.getAllCourses();  
           

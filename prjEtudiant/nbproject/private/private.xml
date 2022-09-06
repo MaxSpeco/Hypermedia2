@@ -2,27 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Connection/ConnectionFactory.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Controllers/EditStudent.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Controllers/ViewGrade.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Controllers/ViewCourse.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Model/Course.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Controllers/EditStudent2.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Controllers/ViewStudents.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Controllers/SaveStudent.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Controllers/DeleteCourse.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Controllers/EditCourse.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Controllers/EditGrade.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Controllers/SaveGrade.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Model/Grade.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Controllers/DeleteStudent.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Controllers/SaveCourse.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Controllers/EditGrade2.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Controllers/DeleteGrade.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Model/Student.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Dao/StudentDao.java</file>
-            <file>file:/C:/Users/maxim/OneDrive/Desktop/prjEtudiant/prjEtudiant/src/java/Controllers/EditCourse2.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

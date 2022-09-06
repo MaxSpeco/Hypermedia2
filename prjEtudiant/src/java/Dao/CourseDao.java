@@ -24,7 +24,7 @@ public class CourseDao {
         int status=0;  
         try{  
             Connection con = ConnectionFactory.getConnection();  
-            PreparedStatement ps = con.prepareStatement("insert into courses(id,name,description) values (?,?,?)");  
+            PreparedStatement ps = con.prepareStatement("insert into cours(id,name,description) values (?,?,?)");  
             ps.setInt(1,c.getCourseId());  
             ps.setString(2,c.getCourseName());  
             ps.setString(3,c.getCourseDescription());  
@@ -40,7 +40,7 @@ public class CourseDao {
         int status=0;  
         try{  
             Connection con=ConnectionFactory.getConnection();  
-            PreparedStatement ps=con.prepareStatement("update courses set name=?,description=? where id=?");  
+            PreparedStatement ps=con.prepareStatement("update cours set name=?,description=? where id=?");  
               
             ps.setString(1,c.getCourseName());  
             ps.setString(2,c.getCourseDescription());  
@@ -56,7 +56,7 @@ public class CourseDao {
         int status=0;  
         try{  
             Connection con=ConnectionFactory.getConnection();  
-            PreparedStatement ps=con.prepareStatement("delete from courses where id=?");  
+            PreparedStatement ps=con.prepareStatement("delete from cours where id=?");  
             ps.setInt(1,id);  
             status=ps.executeUpdate();  
               
@@ -70,7 +70,7 @@ public class CourseDao {
           
         try{  
             Connection con = ConnectionFactory.getConnection();  
-            PreparedStatement ps = con.prepareStatement("select * from courses where id=?");  
+            PreparedStatement ps = con.prepareStatement("select * from cours where id=?");  
             ps.setInt(1,id);  
             ResultSet rs = ps.executeQuery();  
             if(rs.next()){  
@@ -88,7 +88,7 @@ public class CourseDao {
           
         try{  
             Connection con = ConnectionFactory.getConnection();  
-            PreparedStatement ps=con.prepareStatement("select * from courses");  
+            PreparedStatement ps=con.prepareStatement("select * from cours");  
             ResultSet rs=ps.executeQuery();  
             while(rs.next()){  
                 Course e = new Course();  
